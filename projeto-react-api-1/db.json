@@ -1,10 +1,136 @@
 {
-    "books": [],
-    "categories": [
-        { "id": 1, "name": "Ficção científica" },
-        { "id": 2, "name": "Back-end" },
-        { "id": 3, "name": "Front-end" },
-        { "id": 4, "name": "Banco de dados" },
-        { "id": 5, "name": "Computação em nuvem" }
-    ]
+  "books": [
+    {
+      "id": "faa1",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "28e5",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "4ed1",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "de7d",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "24f1",
+      "nome_livro": "as cavernas de aço",
+      "nome_autor": "isaack azimov",
+      "descricao": "teste",
+      "category": {
+        "id": "Ficção científica",
+        "category": "Ficção científica"
+      }
+    },
+    {
+      "id": "ff22",
+      "nome_livro": "gustavo lixo",
+      "nome_autor": "lixo",
+      "descricao": "lixo",
+      "category": {
+        "id": "Back-end",
+        "category": "Back-end"
+      }
+    },
+    {
+      "id": "2fd2",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    }
+  ],
+  "categories": [
+    {
+      "id": "1",
+      "name": "Ficção científica"
+    },
+    {
+      "id": "2",
+      "name": "Back-end"
+    },
+    {
+      "id": "3",
+      "name": "Front-end"
+    },
+    {
+      "id": "4",
+      "name": "Banco de dados"
+    },
+    {
+      "id": "5",
+      "name": "Computação em nuvem"
+    },
+    {
+      "id": "2f9e",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "0992",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "3b78",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "9d07",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "Front-end",
+        "category": "Front-end"
+      }
+    }
+  ]
 }
