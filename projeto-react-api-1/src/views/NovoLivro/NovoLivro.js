@@ -47,7 +47,7 @@ function NovoLivro() {
             .then((res) => res.json())
             .then((data) => {
                 console.log(data);
-                navigate('/livros');
+                navigate('/livros', { state: 'outra' });
             })
             .catch((error) => {
                 console.log(error);
