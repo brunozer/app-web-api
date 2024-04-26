@@ -1,111 +1,17 @@
 {
   "books": [
     {
-      "id": "faa1",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
+      "id": "a8e8",
+      "nome_livro": "memorias do subsolo",
+      "nome_autor": "dostoievski",
       "descricao": "teste",
       "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "28e5",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "4ed1",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "de7d",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "24f1",
-      "nome_livro": "as cavernas de aço",
-      "nome_autor": "isaack azimov",
-      "descricao": "teste",
-      "category": {
-        "id": "Ficção científica",
+        "id": "1",
         "category": "Ficção científica"
       }
     },
     {
-      "id": "ff22",
-      "nome_livro": "gustavo lixo",
-      "nome_autor": "lixo",
-      "descricao": "lixo",
-      "category": {
-        "id": "Back-end",
-        "category": "Back-end"
-      }
-    },
-    {
-      "id": "2fd2",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "7d4f"
-    },
-    {
-      "id": "c2af"
-    },
-    {
-      "id": "f925"
-    },
-    {
-      "id": "dec8"
-    },
-    {
-      "id": "88d3"
-    },
-    {
-      "id": "521a"
-    },
-    {
-      "id": "c436"
-    },
-    {
-      "id": "cb78"
-    },
-    {
-      "id": "2fc7"
-    },
-    {
-      "id": "f242"
-    },
-    {
-      "id": "ad3a",
-      "nome_livro": "alzeimer"
-    },
-    {
-      "id": "4b64"
+      "id": "b82f"
     }
   ],
   "categories": [
