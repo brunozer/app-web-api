@@ -7,9 +7,11 @@ import { useState, useEffect } from 'react';
 function Livros() {
     const [books, setBooks] = useState([]);
 
+    const [bookMessage, setBookMessage] = useState('');
+
     useEffect(() => {
         fetchDados();
-    }, []);
+    }, [books]);
     const fetchDados = async () => {
         await fetch('http://localhost:5000/books', {
             method: 'GET',
@@ -23,6 +25,23 @@ function Livros() {
                 console.log(error);
             });
     };
+
+    async function removeBooks(id) {
+        await fetch(`http://localhost:5000/books/${id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-type': 'application/json',
+            },
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                setBookMessage('livro excluido com sucessso');
+            })
+            .catch((error) => {
+                console.log(error);
+            });
+    }
+
     const location = useLocation();
     let message = '';
     if (location.state) {
@@ -34,6 +53,8 @@ function Livros() {
             <h1>Livros</h1>
             {message && <Message msg={message} type="success" />}
 
+            {bookMessage && <Message msg={bookMessage} type="success" />}
+
             {books.map((data) => (
                 <Cardbook
                     key={data.id}
@@ -41,6 +62,7 @@ function Livros() {
                     autor={data.nome_autor}
                     livro={data.nome_livro}
                     category={data.category.category}
+                    handlerRemove={removeBooks}
                 />
             ))}
         </section>

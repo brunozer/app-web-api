@@ -1,17 +1,14 @@
 {
   "books": [
     {
-      "id": "a8e8",
-      "nome_livro": "memorias do subsolo",
-      "nome_autor": "dostoievski",
+      "id": "7b68",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
       "descricao": "teste",
       "category": {
-        "id": "1",
-        "category": "Ficção científica"
+        "id": "2",
+        "category": "Back-end"
       }
-    },
-    {
-      "id": "b82f"
     }
   ],
   "categories": [
@@ -34,46 +31,6 @@
     {
       "id": "5",
       "name": "Computação em nuvem"
-    },
-    {
-      "id": "2f9e",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "0992",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "3b78",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
-    },
-    {
-      "id": "9d07",
-      "nome_livro": "teste",
-      "nome_autor": "teste",
-      "descricao": "teste",
-      "category": {
-        "id": "Front-end",
-        "category": "Front-end"
-      }
     }
   ]
 }
