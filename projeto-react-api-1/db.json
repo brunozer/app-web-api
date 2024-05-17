@@ -9,6 +9,26 @@
         "id": "2",
         "category": "Back-end"
       }
+    },
+    {
+      "id": "9d1a",
+      "nome_livro": "teste",
+      "nome_autor": "teste",
+      "descricao": "teste",
+      "category": {
+        "id": "3",
+        "category": "Front-end"
+      }
+    },
+    {
+      "id": "e11d",
+      "nome_livro": "memorias do subsolo",
+      "nome_autor": "fiodor dostoievski",
+      "descricao": "livro",
+      "category": {
+        "id": "2",
+        "category": "Back-end"
+      }
     }
   ],
   "categories": [
