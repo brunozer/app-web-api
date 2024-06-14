@@ -37,10 +37,14 @@ function NovoLivro() {
         });
     }
     const criarLivro = async () => {
-        await fetch('http://localhost:5000/books', {
+        await fetch('http://localhost:3000/livro', {
             method: 'POST',
+            mode: 'cors',
+
             headers: {
                 'Content-type': 'application/json',
+                'Acess-Control-Allow-Origin': '*',
+                'Acess-Control-Allow-Headers': '*'
             },
             body: JSON.stringify(livro),
         })
@@ -66,16 +70,16 @@ function NovoLivro() {
                     <div>
                         <Input
                             type="text"
-                            name="nome_livro"
-                            id="nome_livro"
+                            name="titulo_livro"
+                            id="titulo_livro"
                             placeholder="digite o titulo do livro"
                             text="digite o titulo do livro"
                             handlerOnChange={handlerChangeLivro}
                         />
                         <Input
                             type="text"
-                            name="nome_autor"
-                            id="nome_autor"
+                            name="autor_livro"
+                            id="autor_livro"
                             placeholder="digite o nome do autor"
                             text="digite o nome do autor"
                             handlerOnChange={handlerChangeLivro}
@@ -83,8 +87,8 @@ function NovoLivro() {
 
                         <Input
                             type="text"
-                            name="descricao"
-                            id="descricao"
+                            name="descricao_livro"
+                            id="descricao_livro"
                             placeholder="digite a descricao"
                             text="digite a descricao"
                             handlerOnChange={handlerChangeLivro}

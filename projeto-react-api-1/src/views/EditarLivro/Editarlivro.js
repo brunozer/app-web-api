@@ -1,26 +1,51 @@
 import React, { useState, useEffect } from 'react';
 import styles from './editarlivro.module.css';
-import { useParams } from 'react-router-dom';
+import { useParams, useNavigate } from 'react-router-dom';
 import Input from '../../components/Form/Input';
 import Select from '../../components/Form/Select';
 export default function Editarlivro(params) {
     const { id } = useParams();
     const [categories, setCategories] = useState([]);
     const [book, setBook] = useState({});
+    const navigate = useNavigate();
 
     useEffect(() => {
         fetchDados();
         loadCategories();
     }, []);
     const fetchDados = async () => {
-        await fetch(`http://localhost:5000/books/${id}`, {
+        await fetch(`http://localhost:3000/livros/${id}`, {
             method: 'GET',
+            mode: 'cors',
             headers: {
                 'Content-type': 'application/json',
+                'Acess-Control-Allow-Origin': '*',
+                'Acess-Control-Allow-Headers': '*'
             },
         })
             .then((res) => res.json())
-            .then((data) => setBook(data))
+            .then((data) => setBook(data.livro))
+            .catch((error) => {
+                console.log(error);
+            });
+    };
+
+    const editarLivro = async () => {
+        await fetch(`http://localhost:3000/livros/${id}`, {
+            method: 'PUT',
+            mode: 'cors',
+            headers: {
+                'Content-type': 'application/json',
+                'Acess-Control-Allow-Origin': '*',
+                'Acess-Control-Allow-Headers': '*'
+            },
+            body: JSON.stringify(book),
+        })
+            .then((res) => res.json())
+            .then((data) => {
+                console.log(data);
+                navigate('/livros');
+            })
             .catch((error) => {
                 console.log(error);
             });
@@ -53,24 +78,25 @@ export default function Editarlivro(params) {
     return (
         <div className={styles.book_container}>
             <h1>Edição de livro</h1>
-            <form>
+            <form onSubmit={editarLivro}>
                 <div>
+             
                     <Input
                         type="text"
-                        name="nome_livro"
-                        id="nome_livro"
+                        name="titulo_livro"
+                        id="titulo_livro"
                         placeholder="digite o titulo do livro"
                         text="digite o titulo do livro"
-                        value={book.nome_livro}
+                        value={book.titulo_livro}
                         handlerOnChange={handlerChangeLivro}
                     />
                     <Input
-                        type="text"
-                        name="nome_autor"
-                        id="nome_autor"
-                        placeholder="digite o nome do autor"
-                        text="digite o nome do autor"
-                        value={book.nome_autor}
+                          type="text"
+                          name="autor_livro"
+                          id="autor_livro"
+                          placeholder="digite o nome do autor"
+                          text="digite o nome do autor"
+                        value={book.autor_livro}
                         handlerOnChange={handlerChangeLivro}
                     />
 
@@ -80,15 +106,15 @@ export default function Editarlivro(params) {
                         id="descricao"
                         placeholder="digite a descricao"
                         text="digite a descricao"
-                        value={book.nome_autor}
+                        value={book.descricao_livro}
                         handlerOnChange={handlerChangeLivro}
                     />
-                    <Select
+                    {/* <Select
                         name="categoria_id"
                         text="selecione a categoria do livro"
                         options={categories}
                         handlerOnChange={handlerChangeCategories}
-                    />
+                    /> */}
                     <input type="submit" value="editar livro" />
                 </div>
             </form>

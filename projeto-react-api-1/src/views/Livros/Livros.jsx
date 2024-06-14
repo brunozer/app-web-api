@@ -13,24 +13,30 @@ function Livros() {
         fetchDados();
     }, [books]);
     const fetchDados = async () => {
-        await fetch('http://localhost:5000/books', {
+        await fetch('http://localhost:3000/livros', {
             method: 'GET',
+            mode: 'cors',
             headers: {
                 'Content-type': 'application/json',
+                'Access-Control-Allow-Origin': "*",
+                'Access-Control-Allow-Headers': '*'
             },
         })
             .then((res) => res.json())
-            .then((data) => setBooks(data))
+            .then((data) => setBooks(data.livros))
             .catch((error) => {
                 console.log(error);
             });
     };
 
     async function removeBooks(id) {
-        await fetch(`http://localhost:5000/books/${id}`, {
+        await fetch(`http://localhost:3000/livros/${id}`, {
             method: 'DELETE',
+            mode: 'cors',
             headers: {
                 'Content-type': 'application/json',
+                     'Access-Control-Allow-Origin': "*",
+                'Access-Control-Allow-Headers': '*'
             },
         })
             .then((res) => res.json())
@@ -58,10 +64,9 @@ function Livros() {
             {books.map((data) => (
                 <Cardbook
                     key={data.id}
-                    id={data.id}
-                    autor={data.nome_autor}
-                    livro={data.nome_livro}
-                    category={data.category.category}
+                    id={data.cod_livro}
+                    autor={data.autor_livro}
+                    livro={data.titulo_livro}
                     handlerRemove={removeBooks}
                 />
             ))}
